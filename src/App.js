@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import { Container, Grid } from '@mui/material';
 import './App.css';
+import { leaders } from './data/leaders';
+import LeaderBadge from './components/LeaderBadge/LeaderBadge';
+import { observer } from 'mobx-react-lite';
+import rootStore from './store/Root';
+import LeadersList from './components/LeadersList/LeadersList';
+import LeadersRanked from './components/LeadersRanked/LeadersRanked';
+import Randomizer from './components/Randomizer/Randomizer';
 
-function App() {
+const App = observer(() => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container maxWidth={1200}>
+        {/* <LeadersList />
+        <LeadersRanked /> */}
+        <Randomizer />
+      </Container>
     </div>
   );
-}
+})
 
 export default App;
