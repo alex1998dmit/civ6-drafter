@@ -10,6 +10,7 @@ class RandomizerStore {
         3: 1
     }
     draftResults = [];
+    dlcs = [];
 
     constructor(rootStore) {
         this.rootStore = rootStore;
@@ -31,20 +32,9 @@ class RandomizerStore {
         const BRankLeaders = _.sampleSize(this.rootStore.leadersStore.BRankedLeaders, this.leadersNumber[2] * this.playersAmount);
         const CRankLeaders = _.sampleSize(this.rootStore.leadersStore.CRankedLeaders, this.leadersNumber[3] * this.playersAmount);
         
-        console.log(SRankLeaders);
-        console.log(ARankLeaders);
-        console.log(BRankLeaders);
-        console.log(CRankLeaders);
-
         const res = Array(this.playersAmount).fill(1).map((el, index) => {
             const start = index * this.playersAmount;
             const end = index * this.playersAmount + this.playersAmount;
-            console.log('---------------------------');
-            console.log(index);
-            console.log(start, end)
-            console.log(SRankLeaders.slice(start, end));
-            console.log(ARankLeaders.slice(start, end));
-            console.log('---------------------------');
             return [
                 ...SRankLeaders.slice(index * this.leadersNumber[0], index * this.leadersNumber[0] + this.leadersNumber[0]),
                 ...ARankLeaders.slice(index * this.leadersNumber[1], index * this.leadersNumber[1] + this.leadersNumber[1]),

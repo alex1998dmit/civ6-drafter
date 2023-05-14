@@ -10,6 +10,7 @@ import Randomizer from './components/Randomizer/Randomizer';
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
 import CivsPage from './components/CivsPage/CivsPage';
+import MainPage from './components/MainPage/MainPage';
 
 const App = observer(() => {
   return (
@@ -17,10 +18,11 @@ const App = observer(() => {
       <Header />
       <Container maxWidth={1200} sx={{ paddingTop: 3 }}>
         <Routes>
-          <Route path='/leades/list' element={<LeadersList />} />
-          <Route path='/leades/rank' element={<LeadersRanked />} />
+          <Route path='/leaders/list' element={<LeadersList />} />
+          <Route path='/leaders/rank' element={<LeadersRanked />} />
           <Route path='/civs/list' element={<CivsPage />} />
-          <Route path='/' element={<Randomizer />} />
+          <Route path='/leaders/draft' element={<Randomizer />} />
+          <Route path='/' element={<MainPage />} />
         </Routes>
         {/* <LeadersList />
         <LeadersRanked /> */}
