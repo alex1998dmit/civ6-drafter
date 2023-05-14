@@ -2,134 +2,21 @@ import styled from "@emotion/styled";
 import { Divider, Grid, Typography } from "@mui/material";
 import { observer } from "mobx-react-lite";
 import rootStore from "../../store/Root";
+import { useDrag } from "react-dnd";
+import RankRow from "./RankRow";
 
 const LeadersRanked = observer(() => {
+    const [, drag] = useDrag(() => ({
+        type: 'leader',
+        collect: (monitor) => ({ isDragging: !!monitor.isDragging() })
+      }))
     return (
         <Grid container item xs={12} spacing={2}>
-            <Grid item xs={12}>
-                <Typography variant="h3">
-                    Тир наций
-                </Typography>
-            </Grid>
-            <Grid item container xs={12}>
-                <Grid type item xs={2} container alignContent={'center'} alignItems={'center'} justifyContent={'center'}>
-                    <Typography variant="h4">
-                        Blocked
-                    </Typography>
-                </Grid>
-                <Grid type item xs={10} container>
-                    {rootStore.leadersStore.blockedLeaders.map((leader) => (
-                        <WrapperStyled>
-                            <AvatarBadge
-                                alt={leader.name}
-                                src={leader.avatar}
-                            />
-                            <Typography variant="text16">
-                                {/* {leader.name} */}
-                            </Typography>
-                        </WrapperStyled>
-                    ))}
-                </Grid>
-            </Grid>
-            <Grid item xs={12}>
-                <Divider />
-            </Grid>
-
-            <Grid item container xs={12}>
-                <Grid type item xs={1} container alignContent={'center'} alignItems={'center'} justifyContent={'center'}>
-                    <Typography variant="h4">
-                        S
-                    </Typography>
-                </Grid>
-                <Grid type item xs={11} container>
-                    {rootStore.leadersStore.SRankedLeaders.map((leader) => (
-                        <WrapperStyled>
-                            <AvatarBadge
-                                alt={leader.name}
-                                src={leader.avatar}
-                            />
-                            <Typography variant="text16">
-                                {/* {leader.name} */}
-                            </Typography>
-                        </WrapperStyled>
-                    ))}
-                </Grid>
-            </Grid>
-            <Grid item xs={12}>
-                <Divider />
-            </Grid>
-
-            <Grid item container xs={12}>
-                <Grid type item xs={1} container alignContent={'center'} alignItems={'center'} justifyContent={'center'}>
-                    <Typography variant="h4">
-                        A
-                    </Typography>
-                </Grid>
-                <Grid type item xs={11} container>
-                    {rootStore.leadersStore.ARankedLeaders.map((leader) => (
-                        <WrapperStyled>
-                            <AvatarBadge
-                                alt={leader.name}
-                                src={leader.avatar}
-                            />
-                            <Typography variant="text16">
-                                {/* {leader.name} */}
-                            </Typography>
-                        </WrapperStyled>
-                    ))}
-                </Grid>
-            </Grid>
-
-            <Grid item xs={12}>
-                <Divider />
-            </Grid>
-            <Grid item container xs={12}>
-                <Grid type item xs={1} container alignContent={'center'} alignItems={'center'} justifyContent={'center'}>
-                    <Typography variant="h4">
-                        B
-                    </Typography>
-                </Grid>
-                <Grid type item xs={11} container>
-                    {rootStore.leadersStore.BRankedLeaders.map((leader) => (
-                        <WrapperStyled>
-                            <AvatarBadge
-                                alt={leader.name}
-                                src={leader.avatar}
-                            />
-                            <Typography variant="text16">
-                                {/* {leader.name} */}
-                            </Typography>
-                        </WrapperStyled>
-                    ))}
-                </Grid>
-            </Grid>
-            <Grid item xs={12}>
-                <Divider />
-            </Grid>
-
-            <Grid item container xs={12}>
-                <Grid type item xs={1} container alignContent={'center'} alignItems={'center'} justifyContent={'center'}>
-                    <Typography variant="h4">
-                        C
-                    </Typography>
-                </Grid>
-                <Grid type item xs={11} container>
-                    {rootStore.leadersStore.CRankedLeaders.map((leader) => (
-                        <WrapperStyled>
-                            <AvatarBadge
-                                alt={leader.name}
-                                src={leader.avatar}
-                            />
-                            <Typography variant="text16">
-                                {/* {leader.name} */}
-                            </Typography>
-                        </WrapperStyled>
-                    ))}
-                </Grid>
-            </Grid>
-            <Grid item xs={12}>
-                <Divider />
-            </Grid>
+            <RankRow rate='blocked' leaders={rootStore.leadersStore.blockedLeaders} />
+            <RankRow rate={0} leaders={rootStore.leadersStore.SRankedLeaders} />
+            <RankRow rate={1} leaders={rootStore.leadersStore.ARankedLeaders} />
+            <RankRow rate={2} leaders={rootStore.leadersStore.BRankedLeaders} />
+            <RankRow rate={3} leaders={rootStore.leadersStore.CRankedLeaders} />
         </Grid>
     )
 })

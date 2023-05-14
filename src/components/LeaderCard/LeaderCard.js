@@ -7,7 +7,7 @@ import { Typography } from "@mui/material";
 
 const LeaderCard = observer(({ leader }) => {
     return (
-        <Card sx={{ width: 250, margin: 1 }}>
+        <Card sx={{ width: 200, margin: 1 }}>
             <CardMedia
                 sx={{ height: 70, backgroundSize: 'contain' }}
                 image={leader.avatar}
@@ -16,16 +16,9 @@ const LeaderCard = observer(({ leader }) => {
             />
             <CardContent >
                 <Typography gutterBottom variant="text16" component="div">
-                    {leader.name}
+                    {leader.name} {leader.level}
                 </Typography>
-                {/* <Typography variant="caption" color="text.secondary" letterSpacing={0}>
-                    {leader.info}
-                </Typography> */}
             </CardContent>
-            <CardActions>
-                {/* <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button> */}
-            </CardActions>
         </Card>
     )
 });

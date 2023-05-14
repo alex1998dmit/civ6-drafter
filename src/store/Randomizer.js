@@ -2,24 +2,14 @@ import _ from "lodash";
 import { makeAutoObservable, runInAction } from "mobx";
 
 class RandomizerStore {
-    firstTeamLeaders = {
-        S: [],
-        A: [],
-        B: [],
-        C: []
-    }
-    secondTeamLeaders = {
-        S: [],
-        A: [],
-        B: [],
-        C: []
-    }
+    playersAmount = 4;
     leadersNumber = {
-        S: 1,
-        A: 3,
-        B: 2,
-        C: 1
+        0: 1,
+        1: 3,
+        2: 2,
+        3: 1
     }
+    draftResults = [];
 
     constructor(rootStore) {
         this.rootStore = rootStore;
@@ -28,30 +18,42 @@ class RandomizerStore {
     }
 
     updateLeadersNumber = (rang, number) => {
-        this.leadersNumber[number] = rang;
+        this.leadersNumber[rang] = number;
+    }
+
+    udpatePlayersAmount = amount => {
+        this.playersAmount = amount;
     }
 
     randomize = () => {
-        const SRankLeaders = _.sampleSize(this.rootStore.leadersStore.SRankedLeaders, this.leadersNumber.S * 2);
-        const ARankLeaders = _.sampleSize(this.rootStore.leadersStore.ARankedLeaders, this.leadersNumber.A * 2);
-        const BRankLeaders = _.sampleSize(this.rootStore.leadersStore.BRankedLeaders, this.leadersNumber.B * 2);
-        const CRankLeaders = _.sampleSize(this.rootStore.leadersStore.CRankedLeaders, this.leadersNumber.C * 2);
+        const SRankLeaders = _.sampleSize(this.rootStore.leadersStore.SRankedLeaders, this.leadersNumber[0] * this.playersAmount);
+        const ARankLeaders = _.sampleSize(this.rootStore.leadersStore.ARankedLeaders, this.leadersNumber[1] * this.playersAmount);
+        const BRankLeaders = _.sampleSize(this.rootStore.leadersStore.BRankedLeaders, this.leadersNumber[2] * this.playersAmount);
+        const CRankLeaders = _.sampleSize(this.rootStore.leadersStore.CRankedLeaders, this.leadersNumber[3] * this.playersAmount);
+        
         console.log(SRankLeaders);
+        console.log(ARankLeaders);
+        console.log(BRankLeaders);
+        console.log(CRankLeaders);
 
-        this.SRanked = SRankLeaders;
-        this.firstTeamLeaders = {
-            S: SRankLeaders.slice(0, 2),
-            A: ARankLeaders.slice(0, 2),
-            B: BRankLeaders.slice(0, 2),
-            C: CRankLeaders.slice(0, 2),
-        }
-
-        this.secondTeamLeaders = {
-            S: SRankLeaders.slice(2, 4),
-            A: ARankLeaders.slice(2, 4),
-            B: BRankLeaders.slice(2, 4),
-            C: CRankLeaders.slice(2, 4),
-        }
+        const res = Array(this.playersAmount).fill(1).map((el, index) => {
+            const start = index * this.playersAmount;
+            const end = index * this.playersAmount + this.playersAmount;
+            console.log('---------------------------');
+            console.log(index);
+            console.log(start, end)
+            console.log(SRankLeaders.slice(start, end));
+            console.log(ARankLeaders.slice(start, end));
+            console.log('---------------------------');
+            return [
+                ...SRankLeaders.slice(index * this.leadersNumber[0], index * this.leadersNumber[0] + this.leadersNumber[0]),
+                ...ARankLeaders.slice(index * this.leadersNumber[1], index * this.leadersNumber[1] + this.leadersNumber[1]),
+                ...BRankLeaders.slice(index * this.leadersNumber[2], index * this.leadersNumber[2] + this.leadersNumber[2]),
+                ...CRankLeaders.slice(index * this.leadersNumber[3], index * this.leadersNumber[3] + this.leadersNumber[3])
+            ];
+        })
+        console.log(res);
+        this.draftResults = res;
     }
 }
 

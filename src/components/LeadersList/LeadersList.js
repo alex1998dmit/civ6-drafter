@@ -6,15 +6,15 @@ import LeaderBadge from "../LeaderBadge/LeaderBadge";
 
 const LeadersList = observer(() => {
     return (
-        <Grid item xs={12} container>
-            <Grid item xs={12}>
-                <Typography variant="h5">
-                    Все лидеры:
+        <Grid item xs={12} container spacing={2}>
+            <Grid item xs={12} pb={3}>
+                <Typography align="start" variant="h3">
+                    Все лидеры
                 </Typography>
             </Grid>
             <Grid item xs={12} container>
                 {rootStore.leadersStore.leaders.map((leader, index) => (
-                    <LeaderBadge leader={leader} />
+                    <LeaderBadge leader={leader} isClickable />
                 ))}
             </Grid>
         </Grid>

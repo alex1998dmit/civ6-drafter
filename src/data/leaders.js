@@ -28,7 +28,7 @@ export const leaders = [
         info: '+20%  производства при строительстве всех районов; +40% – если по соседству с центром города находится нубийская пирамида.'
     },    
     {
-        id: 3,
+        id: 103,
         relativeLeaders: [4],
         name: 'Алиенора Аквитанская (Англия)',
         avatar: 'https://static.wikia.nocookie.net/civilization/images/2/2f/Eleanor_of_Aquitaine_%28English%29_%28Civ6%29.png',
@@ -75,7 +75,7 @@ export const leaders = [
         id: 8,
         relativeLeaders: [7, 3],
         name: 'Виктория (Эпоха паровых машин)',
-        avatar: 'https://static.wikia.nocookie.net/civ/images/9/94/%D0%90%D0%BB%D0%B8%D0%B5%D0%BD%D0%BE%D1%80%D0%B0_%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D1%8F_%28Civ6%29.png',
+        avatar: 'https://static.wikia.nocookie.net/civilization/images/8/8d/Victoria_%28Age_of_Steam%29_%28Civ6%29.png',
         level: 1,
         allow: true,
         info: '+10%  производства в городе за каждую постройку в промышленной зоне этого города. +2  производства для всех стратегических ресурсов.'
@@ -151,7 +151,7 @@ export const leaders = [
         id: 16,
         relativeLeaders: [17, 4],
         name: 'Екатеорина Медичи (Великая)',
-        avatar: 'https://static.wikia.nocookie.net/civ/images/9/94/%D0%90%D0%BB%D0%B8%D0%B5%D0%BD%D0%BE%D1%80%D0%B0_%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D1%8F_%28Civ6%29.png',
+        avatar: 'https://static.wikia.nocookie.net/civilization/images/e/e2/Catherine_de_Medici_%28Magnificence%29_%28Civ6%29.png',
         level: 2,
         allow: true,
         info: 'Улучшенные редкие ресурсы, находящиеся рядом с театральной площадью или шато, получают +2 к  культуре. Может устроить «Придворный фестиваль» в любом городе с театральной площадью.'
@@ -199,7 +199,7 @@ export const leaders = [
         relativeLeaders: [20, 36],
         name: 'Клеопатра (Династия Птолимеев)',
         // TODO добавить индию
-        avatar: 'https://static.wikia.nocookie.net/civ/images/9/94/%D0%90%D0%BB%D0%B8%D0%B5%D0%BD%D0%BE%D1%80%D0%B0_%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D1%8F_%28Civ6%29.png',
+        avatar: 'https://static.wikia.nocookie.net/civilization/images/0/0f/Cleopatra_%28Ptolemaic%29_%28Civ6%29.png',
         level: 1,
         allow: true,
         info: 'Ресурсы вдоль пойм дают +1  пищи и +1  культуры. Принадлежащие вам клетки поймы дают +1 престижа соседним клеткам вместо обычного -1.'
@@ -309,7 +309,7 @@ export const leaders = [
         id: 33,
         relativeLeaders: [],
         name: 'Педру II',
-        avatar: 'https://civilization.fandom.com/wiki/Pedro_II_(Civ6)',
+        avatar: 'https://static.wikia.nocookie.net/civilization/images/7/7c/Pedro_II_%28Civ6%29.png',
         level: 2,
         allow: true,
         info: 'После найма или меценатства  великого человека возвращается 20% потраченных на него  ОВЛ.',
@@ -362,7 +362,7 @@ export const leaders = [
         id: 39,
         relativeLeaders: [38],
         name: 'Саладин (султан)',
-        avatar: 'https://static.wikia.nocookie.net/civ/images/9/94/%D0%90%D0%BB%D0%B8%D0%B5%D0%BD%D0%BE%D1%80%D0%B0_%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D1%8F_%28Civ6%29.png',
+        avatar: 'https://static.wikia.nocookie.net/civilization/images/8/82/Saladin_%28Sultan%29_%28Civ6%29.png',
         level: 2,
         allow: true,
         info: '+100% к бонусу за атаку с фланга и поддержку всем боевым и религиозным юнитам.'
@@ -382,7 +382,7 @@ export const leaders = [
         name: 'Седжон (султан)',
         avatar: 'https://static.wikia.nocookie.net/civilization/images/b/b8/Sejong_%28Civ6%29.png',
         level: 0,
-        allow: true,
+        allow: false,
         info: `После завершения первой технологии из новой эры, получает Культура культуру, равную удвоенному текущему результату в Наука науке за ход.`,
     },
     {
@@ -407,7 +407,7 @@ export const leaders = [
         id: 44,
         relativeLeaders: [43],
         name: 'Сулейман (Кануни)',
-        avatar: 'https://static.wikia.nocookie.net/civ/images/9/94/%D0%90%D0%BB%D0%B8%D0%B5%D0%BD%D0%BE%D1%80%D0%B0_%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D1%8F_%28Civ6%29.png',
+        avatar: 'https://static.wikia.nocookie.net/civilization/images/d/d0/Suleiman_%28Muhte%C5%9Fem%29_%28Civ6%29.png',
         level: 2,
         allow: true,
         info: `Имеет доступ к уникальному губернатору, Ибрагиму, Великому визирю. Получает янычар уникальное подразделение, и 1 Губернатор титул губернатора с порохом.`,
@@ -434,7 +434,7 @@ export const leaders = [
         id: 47,
         relativeLeaders: [48, 2],
         name: 'Теодор Рузвельт (Мужественный всадник)',
-        avatar: 'https://static.wikia.nocookie.net/civ/images/9/94/%D0%90%D0%BB%D0%B8%D0%B5%D0%BD%D0%BE%D1%80%D0%B0_%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D1%8F_%28Civ6%29.png',
+        avatar: 'https://static.wikia.nocookie.net/civilization/images/c/c3/Teddy_Roosevelt_%28Rough_Rider%29_%28Civ6%29.png',
         level: 1,
         allow: true,
         info: 'Юниты получают +5 к  боевой мощи на родном континенте. Послы в городах-государствах, с которыми у вас есть  торговые пути, считаются за двух  послов. Вы получаете уникальный юнит «Мужественный всадник» с технологией «Нарезные стволы».',
@@ -507,7 +507,7 @@ export const leaders = [
         id: 54,
         relativeLeaders: [],
         name: 'Филипп II',
-        avatar: 'https://static.wikia.nocookie.net/civ/images/9/94/%D0%90%D0%BB%D0%B8%D0%B5%D0%BD%D0%BE%D1%80%D0%B0_%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D1%8F_%28Civ6%29.png',
+        avatar: 'https://static.wikia.nocookie.net/civilization/images/5/59/Philip_II_%28Civ6%29.png',
         level: 1,
         allow: true,
         info: 'Инквизиторы могут очищать от ереси на 1 раз больше. Боевые и религиозные юниты получают +5 к  боевой мощи против игроков с другой религией.',
@@ -542,7 +542,7 @@ export const leaders = [
         id: 58,
         relativeLeaders: [],
         name: 'Харальд Суровый (варяг)',
-        avatar: 'https://static.wikia.nocookie.net/civilization/images/7/77/Harald_Hardrada_%28Civ6%29.png',
+        avatar: 'https://static.wikia.nocookie.net/civilization/images/6/61/Harald_Hardrada_%28Varangian%29_%28Civ6%29.png',
         level: 3,
         allow: true,
         info: 'Скидка 75% на мобилизацию юнитов, на содержание всех юнитов требуется на 2 ед. меньше ресурсов.',
@@ -551,7 +551,7 @@ export const leaders = [
         id: 59,
         relativeLeaders: [],
         name: 'Харальд Суровый (конунг)',
-        avatar: 'https://static.wikia.nocookie.net/civ/images/9/94/%D0%90%D0%BB%D0%B8%D0%B5%D0%BD%D0%BE%D1%80%D0%B0_%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D1%8F_%28Civ6%29.png',
+        avatar: 'https://static.wikia.nocookie.net/civilization/images/7/77/Harald_Hardrada_%28Civ6%29.png',
         level: 3,
         allow: true,
         info: 'Все морские юниты ближнего боя получают способность осуществлять рейды на прибрежные территории. +50%  производства при создании всех морских юнитов ближнего боя. Уникальный юнит «Драккар викингов» после открытия мореходства.'
@@ -578,7 +578,7 @@ export const leaders = [
     {
         id: 62,
         relativeLeaders: [],
-        name: 'Хубилай',
+        name: 'Хубилай (Китай)',
         avatar: 'https://static.wikia.nocookie.net/civilization/images/5/54/Kublai_Khan_%28Chinese%29_%28Civ6%29.png',
         level: 2,
         allow: true,
@@ -588,7 +588,7 @@ export const leaders = [
         id: 63,
         relativeLeaders: [],
         name: 'Цинь (небесный мандат)',
-        avatar: 'https://static.wikia.nocookie.net/civ/images/9/94/%D0%90%D0%BB%D0%B8%D0%B5%D0%BD%D0%BE%D1%80%D0%B0_%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D1%8F_%28Civ6%29.png',
+        avatar: 'https://static.wikia.nocookie.net/civilization/images/0/00/Qin_Shi_Huang_%28Unifier%29_%28Civ6%29.png',
         level: 2,
         allow: true,
         info: 'При строительстве чудес Древнего мира и Античности можно израсходовать «заряд» строителей для компенсации 15% полной стоимости чуда. Строители получают дополнительный «заряд».'

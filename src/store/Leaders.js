@@ -13,6 +13,14 @@ class LeadersStore {
 
     }
 
+    getLeader = (leaderId) => {
+        return this.leaders.find((leader) => leader.id === leaderId);
+    }
+
+    setSelected = (leader) => {
+        this.selected = leader;
+    }
+
     get availableLeaders() {
         return this.leaders.filter((leader) => leader.allow);
     }
