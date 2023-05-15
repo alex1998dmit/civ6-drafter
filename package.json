@@ -2,6 +2,7 @@
   "name": "civ-drafter",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://alex1998dmit.github.io/civ6-drafter",
   "dependencies": {
     "@emotion/css": "^11.11.0",
     "@emotion/react": "^11.11.0",
