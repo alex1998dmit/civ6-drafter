@@ -26,6 +26,10 @@ class RandomizerStore {
         this.playersAmount = amount;
     }
 
+    draftNPlayerLeaders = (n) => {
+        
+    }
+
     randomize = () => {
         const SRankLeaders = _.sampleSize(this.rootStore.leadersStore.SRankedLeaders, this.leadersNumber[0] * this.playersAmount);
         const ARankLeaders = _.sampleSize(this.rootStore.leadersStore.ARankedLeaders, this.leadersNumber[1] * this.playersAmount);

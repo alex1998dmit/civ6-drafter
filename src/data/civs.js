@@ -3,91 +3,115 @@ export const civs = [
     id: 0,
     name: 'Австралия',
     avatar: 'https://static.wikia.nocookie.net/civilization/images/c/cf/Australian_%28Civ6%29.png',
-    leaders: [14]
+    leaders: [14],
+    rank: 0
   },
   {
     id: 1,
     name: 'Англия',
     avatar: 'https://static.wikia.nocookie.net/civilization/images/7/7e/English_%28Civ6%29.png',
-    leaders: [7, 8, 72, 103]
+    leaders: [7, 8, 72, 103],
+    rank: 1
   },
   {
     id: 2,
     name: 'Америка',
     avatar: 'https://static.wikia.nocookie.net/civilization/images/9/90/American_%28Civ6%29.png',
-    leaders: [47, 48, 2]
+    leaders: [47, 48, 2],
+    rank: 1
   },
   {
     id: 3,
     name: 'Аравия',
     avatar: 'https://static.wikia.nocookie.net/civilization/images/5/58/Arabian_%28Civ6%29.png',
-    leaders: [38, 39]
+    leaders: [38, 39],
+    rank: 1
   },
   {
     id: 4,
     name: 'Ацтеки',
     avatar: 'https://static.wikia.nocookie.net/civilization/images/b/b6/Aztec_%28Civ6%29.png',
-    leaders: [28]
+    leaders: [28],
+    rank: 2
   },
   {
     id: 5,
     name: 'Бразилия',
     avatar: 'https://static.wikia.nocookie.net/civilization/images/6/6d/Brazilian_%28Civ6%29.png',
-    leaders: [33]
+    leaders: [33],
+    rank: 1
   },
   {
     id: 6,
     name: 'Вавилон',
     avatar: 'https://static.wikia.nocookie.net/civilization/images/1/16/Babylonian_%28Civ6%29.png',
-    leaders: [57]
+    leaders: [57],
+    rank: 0,
+    allow: false,
   },
   {
     id: 7,
     name: 'Великая Колумбия',
     avatar: 'https://static.wikia.nocookie.net/civilization/images/d/d6/Gran_Colombian_%28Civ6%29.png',
-    leaders: [40]
+    leaders: [40],
+    rank: 1,
+    allow: true,
   },
   {
     id: 8,
     name: 'Венгрия',
     avatar: 'https://static.wikia.nocookie.net/civilization/images/3/35/Hungarian_%28Civ6%29.png',
-    leaders: [25]
+    leaders: [25],
+    rank: 2,
+    allow: true,
   },
   {
     id: 9,
     name: 'Византия',
     avatar: 'https://static.wikia.nocookie.net/civilization/images/a/a6/Byzantine_%28Civ6%29.png',
-    leaders: [6, 55]
+    leaders: [6, 55],
+    rank: 2,
+    allow: true,
   },
   {
     id: 10,
     name: 'Вьетнам',
     avatar: 'https://static.wikia.nocookie.net/civilization/images/c/c8/Vietnamese_%28Civ6%29.png',
-    leaders: [68]
+    leaders: [68],
+    rank: 1,
+    allow: true,
   },
   {
     id: 11,
     name: 'Галлия',
     avatar: 'https://static.wikia.nocookie.net/civilization/images/f/f0/Gallic_%28Civ6%29.png',
-    leaders: [5]
+    leaders: [5],
+    rank: 1,
+    allow: true,
   },
   {
     id: 12,
     name: 'Германия',
     avatar: 'https://static.wikia.nocookie.net/civilization/images/e/ed/German_%28Civ6%29.png',
-    leaders: [56, 71]
+    leaders: [56, 71],
+    rank: 0,
+    allow: true,
   },
   {
     id: 13,
     name: 'Греция',
     avatar: 'https://static.wikia.nocookie.net/civilization/images/4/4d/Greek_%28Civ6%29.png',
-    leaders: [34, 12]
+    leaders: [34, 12],
+    rank: 1,
+    allow: true,
   },
   {
     id: 14,
     name: 'Грузия',
     avatar: 'https://static.wikia.nocookie.net/civilization/images/c/c2/Georgian_%28Civ6%29.png',
-    leaders: [46]
+    leaders: [46],
+    rank: 2,
+    allow: true,
   },
   {
     id: 15,
