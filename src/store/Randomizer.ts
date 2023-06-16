@@ -1,8 +1,9 @@
 import _ from "lodash";
-import { makeAutoObservable, runInAction } from "mobx";
+import { makeAutoObservable } from "mobx";
 import { RandomizerLeadersNumber } from "../types/randomizer";
 import { RootStore } from "./Root";
 import DLCStore from "./DLC";
+import LeaderStore from "./Leader";
 
 class RandomizerStore {
     playersAmount = 4;
@@ -12,7 +13,7 @@ class RandomizerStore {
         2: 2,
         3: 1
     }
-    draftResults: any = [];
+    draftResults: Array<Array<LeaderStore>> = [];
     dlcs: Array<DLCStore> = [];
     rootStore: RootStore;
 
@@ -37,8 +38,6 @@ class RandomizerStore {
         const CRankLeaders = _.sampleSize(this.rootStore.leadersStore.CRankedLeaders, this.leadersNumber[3] * this.playersAmount);
         
         const res = Array(this.playersAmount).fill(1).map((el, index) => {
-            const start = index * this.playersAmount;
-            const end = index * this.playersAmount + this.playersAmount;
             return [
                 ...SRankLeaders.slice(index * this.leadersNumber[0], index * this.leadersNumber[0] + this.leadersNumber[0]),
                 ...ARankLeaders.slice(index * this.leadersNumber[1], index * this.leadersNumber[1] + this.leadersNumber[1]),

@@ -1,14 +1,14 @@
 import { Grid, Typography } from "@mui/material";
 import { observer } from "mobx-react-lite";
 import Leader from "./LeaderRankInfo";
-import _ from "lodash";
 import rootStore from "../../../store";
 import { useDrop } from "react-dnd";
 import { leadersLevels } from "../../../data/leader_levels";
 import { RankRowProps } from "./LeadersRanked.d";
+import LeaderStore from "../../../store/Leader";
 
 const RankRow: React.FC<RankRowProps> = observer(({ leaders, rate }) => {
-  const handleDrop = (item: any) => {
+  const handleDrop = (item: LeaderStore) => {
     const leader = rootStore.leadersStore.getLeader(item.id);
     if (rate === -1) {
       leader.forbidLeader();

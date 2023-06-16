@@ -1,4 +1,4 @@
-import { makeAutoObservable, runInAction } from "mobx";
+import { makeAutoObservable } from "mobx";
 import { leadersLevels } from "../data/leader_levels";
 import { LeaderModel } from "../types/leaders";
 
@@ -7,7 +7,6 @@ class LeaderStore {
     name: string;
     avatar: string;
     level: number;
-    allow: boolean;
     info: string;
 
     constructor(leader: LeaderModel) {
@@ -15,25 +14,28 @@ class LeaderStore {
         this.name = leader.name;
         this.avatar = leader.avatar;
         this.level = leader.level;
-        this.allow = leader.allow;
         this.info = leader.info;
         makeAutoObservable(this)
     }
 
     toogleAllowLeader = () => {
-        this.allow = !this.allow;
+        this.level = this.level === -1 ? 0 : -1;
     }
 
     forbidLeader = () => {
-        this.allow = false;
+        this.level = -1;
     }
 
     allowLeader = () => {
-        this.allow = true;
+        this.level = 0;
     }
 
     get levelDescription() {
         return leadersLevels[this.level];
+    }
+
+    get allow() {
+        return this.level === -1;
     }
 
     changeLevel = (level: number) => {
