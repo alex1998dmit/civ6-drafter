@@ -5,36 +5,53 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { Link } from "react-router-dom";
 import { FC } from "react";
+import styled from "@emotion/styled";
+import { HeaderOptionsType } from './Header.d';
+
+const options: Array<HeaderOptionsType> = [
+  {
+    title: 'Главная',
+    to: '/civ6-drafter',
+  },
+  {
+    title: 'Список',
+    to: '/leaders/list',
+  },
+  {
+    title: 'Ранг',
+    to: '/leaders/rank',
+  },
+  {
+    title: 'Драфт',
+    to: '/leaders/draft',
+  },
+  {
+    title: 'Список цивилизаций',
+    to: '/civs/list',
+  },
+]
 
 const Header: FC = observer(() => {
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                <Link to='/leaders/list'>
-                  Список
-                </Link>
-              </Typography>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                <Link to='/leaders/rank'>
-                Ранг
-                </Link>
-              </Typography>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              <Link to='/leaders/draft'>
-                Драфт
-              </Link>
+        <Toolbar>
+          {options.map((option: HeaderOptionsType) => (
+            <Typography variant="h6" pr={3}>
+              <StyledLink to={option.to}>
+                {option.title}
+              </StyledLink>
             </Typography>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                <Link to='/civs/list'>
-                  Список цивилизаций
-                </Link>
-              </Typography>
+          ))}
         </Toolbar>
       </Container>
     </AppBar>
   );
 });
+
+const StyledLink = styled(Link)`
+  color: white;
+  text-decoration: none;
+`
 
 export default Header;

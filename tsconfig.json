@@ -10,7 +10,10 @@
         "module": "commonJS",
         "lib": ["es6", "dom"],
         "target": "ES5",
-        "jsx": "react-jsx"
+        "jsx": "react-jsx",
+        "types": ["node", "jest"],
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
     },
     "exclude": [
         "node_modules",

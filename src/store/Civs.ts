@@ -21,14 +21,14 @@ class CivsStore {
     this.filteredCivs = this.filteredCivs.filter((civ) => civ.id !== id);
   }
 
+  getByCivId = (id: number) => {
+    return _.find(this.civs, { id })
+  }
+
   getRandomly = (n: number) => {
     const res = _.sampleSize(this.civs, n);
     res.forEach((c: CivStore) => this.removeFilteredCiv(c));
     return res;
-  }
-
-  getRandomlyLeaderFromCiv = (civ: CivStore) => {
-    const leaders = _.sampleSize(civ, 1);
   }
 }
 

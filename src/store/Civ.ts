@@ -1,5 +1,4 @@
 import { makeAutoObservable } from "mobx";
-import _ from "lodash";
 import LeaderStore from "./Leader";
 import { CivModel } from "../types/civs";
 import { RootStore } from "./Root";

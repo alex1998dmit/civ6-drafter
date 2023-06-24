@@ -1,4 +1,4 @@
-import { Container, Grid } from '@mui/material';
+import { Container } from '@mui/material';
 import { observer } from 'mobx-react-lite';
 import LeadersList from '../../pages/LeadersList/LeadersList';
 import LeadersRanked from '../../pages/LeadersRanked/LeadersRanked';
@@ -8,6 +8,7 @@ import Header from '../../common/Header/Header';
 import CivsPage from '../../pages/CivsPage/CivsPage';
 import MainPage from '../../pages/MainPage/MainPage';
 import { FC } from 'react';
+import DebugPage from '../../pages/DebugPage/DebugPage';
 
 const App: FC = observer(() => {
   return (
@@ -19,6 +20,7 @@ const App: FC = observer(() => {
           <Route path='/leaders/rank' element={<LeadersRanked />} />
           <Route path='/civs/list' element={<CivsPage />} />
           <Route path='/leaders/draft' element={<Randomizer />} />
+          <Route path='/debug' element={<DebugPage />} />
           <Route path='/civ6-drafter' element={<MainPage />} />
           <Route path='/' element={<MainPage />} />
         </Routes>

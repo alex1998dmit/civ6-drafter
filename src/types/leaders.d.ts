@@ -1,3 +1,5 @@
+import LeaderStore from "../store/Leader"
+
 export type LeaderModel = {
     id: number
     relativeLeaders: Array<number>
@@ -7,6 +9,11 @@ export type LeaderModel = {
     allow: boolean
     info?: string
     dlsId?: number
+    civId: number
+}
+
+export type GroupedLeadersByCiv = {
+    [key: number]: Array<LeaderStore>;
 }
 
 export type LeaderLevelsModel = {

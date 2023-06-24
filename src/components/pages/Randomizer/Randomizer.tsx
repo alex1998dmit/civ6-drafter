@@ -5,7 +5,7 @@ import { observer } from "mobx-react-lite";
 import RandomizerSettings from "./RandomizerSettings";
 import React from "react";
 
-const Randomizer: React.FC = observer(() => {
+const RandomizerPage: React.FC = observer(() => {
     const { randomizerStore } = rootStore;
     return (
         <Grid container item xs={12} spacing={2}>
@@ -27,4 +27,4 @@ const Randomizer: React.FC = observer(() => {
     )
 });
 
-export default Randomizer;
+export default RandomizerPage;
