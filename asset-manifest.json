@@ -1,15 +1,10 @@
 {
   "files": {
-    "main.css": "/civ6-drafter/static/css/main.073c9b0a.css",
-    "main.js": "/civ6-drafter/static/js/main.7c246cf7.js",
-    "static/js/787.e8dd3039.chunk.js": "/civ6-drafter/static/js/787.e8dd3039.chunk.js",
+    "main.js": "/civ6-drafter/static/js/main.b118069c.js",
     "index.html": "/civ6-drafter/index.html",
-    "main.073c9b0a.css.map": "/civ6-drafter/static/css/main.073c9b0a.css.map",
-    "main.7c246cf7.js.map": "/civ6-drafter/static/js/main.7c246cf7.js.map",
-    "787.e8dd3039.chunk.js.map": "/civ6-drafter/static/js/787.e8dd3039.chunk.js.map"
+    "main.b118069c.js.map": "/civ6-drafter/static/js/main.b118069c.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.7c246cf7.js"
+    "static/js/main.b118069c.js"
   ]
 }
